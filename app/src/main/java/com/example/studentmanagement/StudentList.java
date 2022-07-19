@@ -17,13 +17,12 @@ public class StudentList extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        txtMsg = (TextView) findViewById(R.id.txtMsg);
-//        CustomIconLabelAdapter adapter = new CustomIconLabelAdapter(
-//                this,
-//                R.layout.custom_row_icon_label,
-//                items,
-//                thumbnails);
-//// bind intrinsic ListView to custom adapter
-//        setListAdapter(adapter);
+        StudentAdapter adapter = new StudentAdapter(
+                this,
+                R.layout.student_element,
+                studentName);
+// bind intrinsic ListView to custom adapter
+        setListAdapter(adapter);
     }
 
     @Override
